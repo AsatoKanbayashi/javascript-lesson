@@ -1,3 +1,4 @@
+// 基礎編問題
 let nickname = 'ごっしー';
 
 let age = 28;
@@ -92,6 +93,8 @@ calc.multiply(7,7)
 calc.divide(10,2)
 
 
+
+
 // Q9
 function remainder(x,y) {
     console.log(x + 'を' + y + 'で割った余りは' + (x % y) + 'です。')
@@ -101,3 +104,53 @@ remainder(5,3)
 
 // Q10
 // 関数内だけスコープが有効なため、関数の外にあるコンソールは変数を参照できないからです。
+
+// 発展編問題
+// Q1
+let random =Math.floor(Math.random() * 10);
+console.log(random);
+
+// Q2
+setTimeout(function() {
+    console.log('Hello World!');
+}, 3000);
+
+// Q3
+function question3() {
+   let num = Math.random();
+
+    if(num >= 0) {
+        console.log('num is greater than 0');
+    } else if (num <= 0) {
+        console.log('num is less than 0');
+    } else if (num === 0) {
+        console.log('num is 0');
+    }
+}
+
+question3()
+
+// Q4
+
+let numbers = [];
+for (let num = 0; num <100; num++) {
+    numbers.push(num);
+}
+
+console.log(numbers);
+
+// Q5
+function question5() {
+    let mixed = [4, '2', 5, '8', '9', 0, 1];
+    for (let num = 0; num < mixed.length; num++){
+        if(typeof(mixed[num]) === 'number'  && mixed[num] % 2 == 0) {
+            console.log('even');
+        }else if(typeof(mixed[num]) === 'number' && mixed[num] % 2 == 1) {
+            console.log('odd');
+        }else if(typeof(mixed[num]) !== 'number') {
+            console.log('not number');
+        }
+    }
+}
+
+question5()
