@@ -30,6 +30,8 @@ let playerList = [
     },
 ];
 
+let total = 0;
+
 // Q1
 console.log('私のニックネームは' + nickname + 'です。年齢は' + age + '歳です。');
 
@@ -43,7 +45,10 @@ console.log(user.age);
 console.log(playerList[1].favorites[1]);
 
 // Q5
-console.log((playerList[0].age + playerList[1].age + playerList[2].age) / 3);
+for(let num = 0; num < playerList.length; num++) {
+    total = total + playerList[num].age;
+};
+console.log(total / playerList.length);
 
 // Q6
 function sayHello() {
@@ -53,7 +58,7 @@ function sayHello() {
 sayHello()
 
 sayWorld = function() {
-    return console.log('world');
+    console.log('world');
 };
 
 sayWorld()
@@ -143,12 +148,12 @@ console.log(numbers);
 function question5() {
     let mixed = [4, '2', 5, '8', '9', 0, 1];
     for (let num = 0; num < mixed.length; num++){
-        if(typeof(mixed[num]) === 'number'  && mixed[num] % 2 == 0) {
-            console.log('even');
-        }else if(typeof(mixed[num]) === 'number' && mixed[num] % 2 == 1) {
-            console.log('odd');
-        }else if(typeof(mixed[num]) !== 'number') {
+        if(typeof(mixed[num]) !== 'number') {
             console.log('not number');
+        }else if(mixed[num] % 2 == 0) {
+            console.log('even');
+        }else if(mixed[num] % 2 == 1) {
+            console.log('odd');
         }
     }
 }
