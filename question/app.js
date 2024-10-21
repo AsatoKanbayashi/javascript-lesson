@@ -102,7 +102,7 @@ calc.divide(10,2)
 
 // Q9
 function remainder(x,y) {
-    console.log(x + 'を' + y + 'で割った余りは' + (x % y) + 'です。')
+    return console.log( x + 'を' + y + 'で割った余りは' + (x % y) + 'です。');
 }
 
 remainder(5,3)
