@@ -102,7 +102,9 @@ calc.divide(10,2)
 
 // Q9
 function remainder(x,y) {
-    return console.log( x + 'を' + y + 'で割った余りは' + (x % y) + 'です。');
+    let num = x % y;
+    console.log( x + 'を' + y + 'で割った余りは' + num + 'です。');
+    return num;
 }
 
 remainder(5,3)
@@ -119,6 +121,8 @@ console.log(random);
 setTimeout(function() {
     console.log('Hello World!');
 }, 3000);
+// 第一引数が指定した時間に実行される処理を記述し、第二引数が1000/1秒単位で実行するかのタイマーの役割を果たしています。
+// 第二引数には3000という値を代入しているので、３秒後に第一引数の処理が実行されるようになります。
 
 // Q3
 function question3() {
